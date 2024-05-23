@@ -2,26 +2,27 @@
 interface Props {
 	title: string;
 	progress: string;
+	color: string;
 }
 
-const { title, progress } = Astro.props;
+const { title, progress, color } = Astro.props;
 ---
-
 <li class="progress">
     <h3>{title}</h3>
     <div class="skill-shadow">
-        <div class="skill-bar">
+        <div class="skill-bar" style={`width: ${progress}%`}>
             <span class="value">{progress}</span>
         </div>
     </div>
 </li>
 
 
-<style>
+<style define:vars={{color}}>
     li.progress {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width:40%;
     }
     li.progress .skill-shadow {
         background-color: #3030307b;
@@ -29,14 +30,15 @@ const { title, progress } = Astro.props;
         width: 100%;
     }
     .skill-shadow .skill-bar {
-        background-color: #f80808;
+        background-color: var(--color);
+        box-shadow: 0 0 10px var(--color);
         border-radius: 1rem;
-        width: 42%;
-        padding: 1rem;
+        padding: 0.5rem;
         font-style: italic;
         color: #eeeeee;
         text-shadow: 1px 1px 2px #303030;
-        font-size: 1.1em;
+        font-size: 1em;
+        font-weight:bold;
     }
     .skill-bar > span.value::after {
         content: " %";

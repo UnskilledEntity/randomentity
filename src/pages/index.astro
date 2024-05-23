@@ -11,10 +11,23 @@ import Progress from '../components/Progress.astro';
 		<Hero />
 	</section>
 	<section id="skills">
-		<Progress title="Test" progress="42"/>
+		<div class="skills-list">
+			<Progress title="HTML" progress="42" color="green" />
+			<Progress title="CSS" progress="20" color="red" />
+			<Progress title="PHP" progress="90" color="fuchsia" />
+		</div>
 	</section>
 	<section id="timeline"></section>
 	<section id="projects"></section>
 	
 </Layout>
 
+<style>
+	.skills-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+</style>
