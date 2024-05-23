@@ -4,8 +4,8 @@
     </div>
     <div class="hero-text">
         <h2>Hi, ich bin</h2>
-        <h1>UnskilledEntity</h1>
-        <h3>Nerd, Doofi, Star Citizen Enthusiast</h3>
+        <h1 class="color-accent">UnskilledEntity</h1>
+        <h3 class="color-primary">Nerd, Doofi, Star Citizen Enthusiast</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nulla delectus esse aperiam ab voluptas? Vero, quo? Distinctio, recusandae doloremque! Sed et deserunt officia possimus deleniti, quibusdam libero iure distinctio accusamus ipsum.
         </p>
@@ -21,7 +21,7 @@
         align-items: center;
     }
     .hero-text > * {
-        text-align: right;
+        text-align: center;
         margin-bottom: 0.5rem;
         margin-top: 0;
         margin-right:1rem;
@@ -40,18 +40,29 @@
     }
     .hero .hero-text {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .hero-text p {
         margin-top: 1rem;
-        border: 1px solid #404040;
+        border: 1px solid var(--color-primary);
         background-color: rgba(0,0,0,0.2);
         border-radius: 15px;
         padding: 1rem;
+        max-width: 50%;
     }
-    .hero-text p::before {
+    /* .hero-text p::before {
         content: '"';
     }
     .hero-text p::after {
         content: '"';
+    } */
+    .color-accent {
+        color: var(--color-accent);
+    }
+    .color-primary {
+        color: var(--color-primary);
     }
 </style>

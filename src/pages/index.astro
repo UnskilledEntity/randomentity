@@ -1,15 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import Progress from '../components/Progress.astro';
 ---
 
-<Layout title="Star Citizen">
+<Layout title="Portfolio">
 
 	WIN+. = 💩🍀🚑
 	<section id="hero">
 		<Hero />
 	</section>
-	<section id="skills"></section>
+	<section id="skills">
+		<Progress title="Test" progress="42"/>
+	</section>
 	<section id="timeline"></section>
 	<section id="projects"></section>
 	
