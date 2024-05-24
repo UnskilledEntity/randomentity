@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Progress from '../components/Progress.astro';
+import Timeline from '../components/Timeline.astro';
 ---
 
 <Layout title="Portfolio">
@@ -14,10 +15,15 @@ import Progress from '../components/Progress.astro';
 		<div class="skills-list">
 			<Progress title="HTML" progress="42" color="green" />
 			<Progress title="CSS" progress="20" color="red" />
-			<Progress title="PHP" progress="90" color="fuchsia" />
+			<Progress title="PHP" progress="70" color="#dd0077" />
+			<Progress title="C#" progress="10" color="#0000ff" />
+			<Progress title="Word" progress="30" color="#0000ff" />
+			<Progress title="Excel" progress="20" color="#00aa00" />
 		</div>
 	</section>
-	<section id="timeline"></section>
+	<section id="timeline">
+		<Timeline />
+	</section>
 	<section id="projects"></section>
 	
 </Layout>
@@ -30,4 +36,5 @@ import Progress from '../components/Progress.astro';
 		align-items: center;
 		gap: 1rem;
 	}
+
 </style>
